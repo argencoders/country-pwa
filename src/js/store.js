@@ -3,32 +3,35 @@ import { createStore } from 'framework7/lite';
 
 const store = createStore({
   state: {
-    products: [
+    solicitudes: [
       {
-        id: '1',
-        title: 'Apple iPhone 8',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi tempora similique reiciendis, error nesciunt vero, blanditiis pariatur dolor, minima sed sapiente rerum, dolorem corrupti hic modi praesentium unde saepe perspiciatis.'
+        lote: '33',
+        nombre: 'Matias Pando',
+        trabajo:  'Carpintero',
+        estado:'Enviado'
       },
       {
-        id: '2',
-        title: 'Apple iPhone 8 Plus',
-        description: 'Velit odit autem modi saepe ratione totam minus, aperiam, labore quia provident temporibus quasi est ut aliquid blanditiis beatae suscipit odio vel! Nostrum porro sunt sint eveniet maiores, dolorem itaque!'
+        lote: '7',
+        nombre: 'Juan Gonzalez',
+        trabajo: 'Cadete',
+        estado:'Leído'
       },
       {
-        id: '3',
-        title: 'Apple iPhone X',
-        description: 'Expedita sequi perferendis quod illum pariatur aliquam, alias laboriosam! Vero blanditiis placeat, mollitia necessitatibus reprehenderit. Labore dolores amet quos, accusamus earum asperiores officiis assumenda optio architecto quia neque, quae eum.'
+        lote: '147',
+        nombre: '',
+        trabajo: 'Jardinero',
+        estado:'Autorizado'
       },
     ]
   },
   getters: {
-    products({ state }) {
-      return state.products;
+    solicitudes({ state }) {
+      return state.solicitudes;
     }
   },
   actions: {
-    addProduct({ state }, product) {
-      state.products = [...state.products, product];
+    addSolicitud({ state }, solicitud) {
+      state.solicitudes = [...state.solicitudes, solicitud];
     },
   },
 })
