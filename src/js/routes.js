@@ -85,6 +85,5 @@ var routes = [
   },
 ];
 
-console.log('RRRRRRRRR',routes)
 
 export default routes;
