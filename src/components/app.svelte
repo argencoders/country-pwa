@@ -1,4 +1,4 @@
-<App { ...f7params } themeDark>
+<App { ...f7params } themeDark={false}>
 
   <!-- Your main view, should have "view-main" class -->
   <View main class="safe-areas" url="/" />
