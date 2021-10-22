@@ -22,7 +22,11 @@
 </script>
 
 <div class="visor">
-    <p>{#if !lote}&nbsp;{:else}{lote}{/if}</p>
+    {#if !lote}
+    <p class="placeholder">Nro de lote</p>
+    {:else}
+    <p class="lote">{lote}</p>
+    {/if}
 </div>
 
 <div class="teclado">
@@ -50,19 +54,34 @@
 
 <style>
 .visor {
-    font-size: 3.5em;
+    display: flex;
     font-weight: bold;
     text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    height: 6em;
+    background-color:#f2f2f2;
+    margin: 1.6em 1.6em 0.5em 1.6em;
+
 }
 .visor p {
-    padding: 0.2em;
-    background-color:#f2f2f2;
-    margin:0.4em;
+    padding: 0.2e;
+    flex: 1;
 }
+
+.visor p.lote {
+    font-size: 3.5em;
+}
+
+.visor p.placeholder {
+    font-size: 1.2em;
+    color:#888;
+}
+
 .teclado {
     text-align: center;
     font-size: 1.8em;
-    margin: 1em;
+    margin: 0 1em 1em 1em;
 }
 :global(.teclado div[class*="col"]) {
     padding: 0.3em 0;
