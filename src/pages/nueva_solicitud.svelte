@@ -7,19 +7,25 @@
         Button,
         ListItem,
         Icon,
-        Input,
         ListInput,
     } from "framework7-svelte";
-    let selected = "";
+ 
+    import InputLote from '../components/InputLote.svelte';
+
+    let lote;
+    let selected;
+
+    function buscarLote() {
+        console.log("buscar lote");
+    }
+
 </script>
 
 <Page name="nueva_solicitud">
     <Navbar backLink>
         <NavTitle>Nueva solicitud</NavTitle>
     </Navbar>
-    <List>
-        <ListInput label="Lote" type="text" placeholder="lote" />
-    </List>
+    <InputLote bind:lote on:buscar={buscarLote}></InputLote>
     <List menuList>
         <ListItem
             link
