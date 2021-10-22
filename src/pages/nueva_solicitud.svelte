@@ -1,15 +1,21 @@
 <script>
     import { Page, Navbar, NavTitle, List, ListInput,Button } from "framework7-svelte";
-    import BuscaLote from '../components/BuscaLote.svelte';
+    import InputLote from '../components/InputLote.svelte';
+
+    let lote;
+
+    function buscarLote() {
+        console.log('BUSCAR');
+    }
+
 </script>
 
 <Page name="nueva_solicitud">
     <Navbar backLink>
         <NavTitle>Nueva solicitud</NavTitle>
     </Navbar>
-    <BuscaLote />
     <List noHairlinesMd>
-        <ListInput label="Lote" type="text" placeholder="lote" />
+        <InputLote bind:lote on:buscar={buscarLote}></InputLote>
         <ListInput label="Nombre" type="text" placeholder="nombre" />
         <ListInput label="Motivo" type="select"  value="">
             <i class="icon demo-list-icon" slot="left" />
