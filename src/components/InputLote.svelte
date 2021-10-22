@@ -50,7 +50,7 @@
 
 <style>
 .visor {
-    font-size: 4em;
+    font-size: 3.5em;
     font-weight: bold;
     text-align: center;
 }
